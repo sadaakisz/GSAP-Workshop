@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;  /*full screen height*/
+            display: flex;
+            flex-direction: column; /*vertical stack*/
+        }
+
+        .header {
+            height: 15vh;
+            background-color: #f7bf2a;
+        }
+
+        .links {
+            height: 100%; /*center vertically with align-items*/
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+        }
+
+        .content {
+            flex-grow: 1; /*pushes header and footer to top and bottom, content fills the rest*/
+            display: flex;
+            justify-content: space-between; /*pushes sidebars to the left and right*/
+        }
+
+        .sidebar {
+            background-color: #ff6e2d;
+            width: 15vw;
+        }
+
+        .button {
+            align-self: center; /*makes the button un stretched vertically*/
+        }
+
+        .footer {
+            height: 15vh;
+            background-color: #9e1b8b;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="links">
+            <div class="link">Link 1</div>
+            <div class="link">Link 2</div>
+            <div class="link">Link 3</div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="sidebar left"></div>
+        <button class="button">Reverse!</button>
+        <div class="sidebar right"></div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>
